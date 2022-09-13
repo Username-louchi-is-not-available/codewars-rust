@@ -5,11 +5,11 @@
 // "double  spaces"      ==> "elbuod  secaps"
 
 fn main() {
-    println!("{}", reverse_words("The quick brown fox jumps over the lazy dog."));
+    println!("{:?}", reverse_words("double  spaced  words"));
 }
 
 fn reverse_words(str: &str) -> String {
-    str.split_whitespace()
+    str.split(" ")
         .map(|word| word.chars().rev().collect::<String>())
         .collect::<Vec<String>>()
         .join(" ")
