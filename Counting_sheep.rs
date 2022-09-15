@@ -26,7 +26,5 @@ fn count_sheep(sheep: &[bool]) -> u8 {
     sheep
         .iter()
         .filter(|&x| *x == true)
-        .count()
-        .try_into()
-        .unwrap()
+        .count() as u8
 }
